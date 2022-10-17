@@ -2,21 +2,11 @@
 # Напишите программу, которая найдёт разницу между максимальным и минимальным значением дробной части элементов.
 
 # Пример:
-
 # - [1.1, 1.2, 3.1, 5, 10.01] => 0.19
-
-from audioop import reverse
-from re import X, split
-from unicodedata import decimal
-
 lst = [1.1, 1.2, 3.1, 5, 10.01]
-
-
-temp_str = str(lst)
-lst2 = temp_str.replace('10.', '0.').replace('1.', '0.').replace('3.', '0.').replace('5', '0.1').replace('[', '').replace(']','').replace('.','').replace(',','')
-print(type(lst2))
-lst3 = list(map(int,lst2))
-print(type(lst3))
+new_lst = [round(i % 1,2) for i in lst if i%1 != 0]
+print(f'The difference between the maximum {max(new_lst)}\
+ and minimum value {min(new_lst)} of the elements is: ' , max(new_lst) - min(new_lst))
 
 
 
