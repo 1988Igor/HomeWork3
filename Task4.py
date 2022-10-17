@@ -6,7 +6,7 @@
 # - 3 -> 11
 # - 2 -> 10
 
-n = int(input('Enter the decimal number: ')) 
+n = int(input('Enter the number for converting the decimal number to binary: ')) 
 b = ''
 while n > 0:
     b = str(n % 2) + b
