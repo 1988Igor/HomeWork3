@@ -3,8 +3,7 @@
 
 # Пример:
 
-# - [2, 3, 5, 9, 3] -> на нечётных позициях элементы 3 и 9, ответ: 12
-lst = [2, 3, 5, 9, 3, 8]
+lst = list(map(int, input("Enter the numbers through backspace:\n").split()))
 lst2 = []
 for i in range(len(lst)):
     lst[i] = int(lst[i])
@@ -12,3 +11,5 @@ for i in range(len(lst)):
         lst2.append(lst[i])
 print(f'On the odd positions we have next elements : {lst2}')
 print(f'The summ of elements {lst2} is : {sum(lst2)}')
+
+
